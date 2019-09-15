@@ -1,6 +1,6 @@
 body {
 	width: 1920px;
-	background-image: url(../img/111.jpg);
+	/*background-image: url(../img/111.jpg);*/
 	margin: 0;
 	padding: 0;
 	font-family: Arial, sans-serif;
@@ -82,8 +82,7 @@ li a {
 }
 
 .region {
-	width: 150px;
-	/*margin-left: 0px;*/
+	width: 150px;	
 	margin-right: 10px;
 	height: 127px;
 	line-height: 127px;
@@ -151,21 +150,39 @@ li a {
 	height: 500px;
 }
 
+.swiper-wrapper {
+	width: 1920px;
+	height: 500px;
+}
+
 /*RETURN AND CONTROL*/
 #banner .container div {
 	float: left;
 }
 
 /*POPULAR ITEMS*/
+.popular {	
+	clear: both;
+	padding-top: 10px;
+}
+
+.popular h2 {
+	text-align: center;
+	font-size: 26px;
+}
+
 .banner_wrap {
 	display: inline-block;
 	float: left;
 	width: 275px;
 	height: 460px;
+	margin-top: 50px;
+	margin-right: 10px;
 }
 
-.banner_wrap a:hover {
-	color: red;
+.banner_wrap .banner {
+	height: 213px;
+
 }
 
 .banner_wrap button {
@@ -174,4 +191,63 @@ li a {
 	width: 158px;
 	height: 40px;
 	border-radius: 8px;
+}
+
+.banner_wrap p {
+	display: block;
+	clear: both;
+}
+
+/*ADVANTAGE*/
+.advantage .container{
+	clear: both;
+	background-color: #eef4f7;
+	height: 610px;	
+}
+
+.advantage .banner {
+	float: left;
+	height: 250px;
+}
+
+.advantage img {
+	width: 100px;
+	height: 100px;	
+}
+
+.advantage .gift {
+	display: inline-block;
+	clear: both;
+	width: 1170px;
+}
+.advantage .gift button {
+	background-color: #0090ff;
+	color: white;
+	width: 158px;
+	height: 40px;
+	border-radius: 8px;
+}
+/*HOW TO BUY*/
+.how_to_buy .container {
+	clear: both;	
+	height: 450px;	
+}
+
+.how_to_buy .container .banner {
+	display: inline-block;
+	float: left;
+	height: 100%;
+}
+
+.how_to_buy img {
+	width: 100px;
+	height: 100px;
+}
+
+
+/*FOOTER*/
+
+footer .social img {
+	width: 30px;	
+	height: 30px;	
 }
