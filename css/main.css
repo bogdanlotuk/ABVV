@@ -1,5 +1,5 @@
 
-.container {display: flex;width: 1170px;margin: auto;justify-content: stretch;align-items: center;}
+.container {display: flex;max-width: 1170px;width: 100%; margin: auto;justify-content: stretch;align-items: center;}
 
 /*HEADER*/
 header .logo {width: 145px;display: flex;justify-content: center; align-items: center;}
@@ -19,7 +19,7 @@ header .region	p {font-family: Arial; font-size: 14px;margin-top: 25px;}
 header .region	p span {font-weight: bold;}
 
 header .phone {width: 148px;display: flex; justify-content: center;}
-header .phone p {font-family: Arial; font-weight: bold; font-size: 18px; margin-top: 30px;}
+header .phone p {display: block;min-width: 120px; font-family: Arial; font-weight: bold; font-size: 18px; margin-top: 30px;}
 
 header .btn {width: 300px;height: 50px;display: flex;align-items: flex-end; margin-right: -200px;}
 header .btn #callback {background-color: #0090ff; width: 160px; height: 40px;margin-left: 2px; margin-right: 10px;border-radius: 10px;color: white;}
@@ -27,23 +27,22 @@ header .btn #basket {background-color: #0090ff; width: 130px; height: 40px; bord
 header #callback:hover, #basket:hover {cursor: pointer;}
 
 /*SLIDER*/
-#home_slider .container_slider {display: flex; z-index: -1;}
-#home_slider .container_slider img {position: relative;opacity: 1;z-index: -1;}
-
-#home_slider .container_slider .button_catalog {position: absolute;top: 270px;left: 500px}
-#home_slider .container_slider .button_catalog #catalog {background-color: #f6b53f;width: 150px;height: 40px;border-radius: 7px;color: white;}
-#home_slider .container_slider .button_catalog p {font-family: Arial;font-size: 26px;font-weight: bold;color: white;}
+#home_slider .container {display: flex;	width: 100%;height: 500px;}
+#home_slider .container .img {width: 1170px;height: 500px;display: flex;flex-flow: column;justify-content: center;align-items: center;z-index: -1;}
+#home_slider .container .button_catalog {display: flex;	flex-flow: column;justify-content: center;align-items: flex-start;}
+#home_slider .container .button_catalog #catalog {background-color: #f6b53f;width: 150px;height: 40px;border-radius: 7px;color: white;}
+#home_slider .container .button_catalog p {font-family: Arial;font-size: 26px;font-weight: bold;color: white;}
 
 /*RETURN AND CONTROL*/
 #banner {margin-top: -65px;}
-#banner .container {height: 90px; display: flex;flex-wrap: wrap;justify-content: space-around; align-items: center;background-color: white; z-index: 10;}
+#banner .container {min-height: 90px; display: flex;flex-wrap: wrap;justify-content: space-around; align-items: center;background-color: white; z-index: 10;}
 #banner .container div {display: flex;justify-content: center;align-items: center;z-index: 10;}
-#banner .container div div {display: block;margin-right: 5px;}
+#banner .container div .img {display: flex; min-width: 47px; min-height: 47px;background-repeat: no-repeat;}
 #banner .container p {font-family: Arial;font-size: 12px;margin-left: 10px}
 #banner .container span {font-size: 16px;font-weight: bold;}
 
 /*POPULAR ITEMS*/
-#popular_items .container { height: 1150px; display: flex; flex-flow: column;justify-content: center;}
+#popular_items .container { min-height: 1150px; display: flex; flex-flow: column;justify-content: center;}
 #popular_items .container .popular_items_top {height: 200px;}
 #popular_items .container .popular_items_top h2 {font-family: Arial;font-size: 26px;font-weight: 900;margin-top: 90px;margin-bottom: 0;}
 #popular_items .container .popular_items_top .divider {text-align: center;}
@@ -57,19 +56,19 @@ header #callback:hover, #basket:hover {cursor: pointer;}
 #popular_items .container .banner_wrap div button {background-color: #0090ff;width: 130px;height: 40px;border-radius: 6px;color: white;font-size: 14px;margin-top: 10px;}
 
 /*ADVANTAGE*/
-#advantage .container {height: 610px;display: flex;	flex-flow: column;}
+#advantage .container {min-height: 610px;display: flex;	flex-flow: column;}
 #advantage .container .advantage_top {width: 100%;height: 170px;display: flex;flex-flow: column;align-items: center;}
 #advantage .container .advantage_top h2 {font-family: Arial;font-size: 26px;font-weight: 900;margin-top: 90px;margin-bottom: 0;}
 #advantage .container .advantage_top .divider p{text-align: center; margin-top: 0px;}
 #advantage .container .advantage_wrap {width: 100%;display: flex;justify-content: space-around;}
 #advantage .container .advantage_wrap div {width: 285px;height: 280px;display: flex;flex-flow: column;justify-content: flex-start;align-items: center;}
-#advantage .container .advantage_wrap div .img {width: 150px;height: 150px;margin-top: 20px;}
+#advantage .container .advantage_wrap div .img {max-width: 150px;min-height: 150px;margin-top: 20px;}
 #advantage .container .advantage_wrap p {text-align: center;font-family: Arial;font-size: 14px;font-weight: 800;}
 #advantage .container .advantage_bottom{width: 100%;height: 170px;display: flex;justify-content: center;align-items: center;}
 #advantage .container .advantage_bottom button {background-color: #f6b53f;width: 160px;height: 40px;border-radius: 7px;color: white;margin-bottom: 40px;}
 
 /*HOW TO BUY*/
-#how_to_buy .container {height: 455px;display: flex;flex-flow: column;}
+#how_to_buy .container {min-height: 455px;display: flex;flex-flow: column;}
 #how_to_buy .container .how_to_buy_top {height: 160px;}
 #how_to_buy .container .how_to_buy_top h2 {font-family: Arial;font-weight: 900;font-size: 26px;margin-top: 70px;margin-bottom: 0;}
 #how_to_buy .container .how_to_buy_top .divider p {text-align: center; margin-top: 0px;}
@@ -88,12 +87,14 @@ footer .container .footer_info p {font-family: Arial;font-size: 12px;}
 footer .container .footer_info p span {font-size: 14px;font-weight: bold;}
 footer .container .footer_info .footer_logo {width: 150px;display: flex;justify-content: center;align-items: center;} 
 footer .container .footer_info .footer_logo .img {height: 73px;width: 127px;margin-top: -70px;}
-footer .container .footer_info .about_company {width: 180px;margin-left: 50px;}
+footer .container .footer_info .about_company {width: 180px;margin-left: 30px;}
 footer .container .footer_info .help {width: 190px;margin-left: 10px;}
 footer .container .footer_info .service {width: 200px;}
-footer .container .footer_info .questions {width: 200px;}
+footer .container .footer_info .questions {width: 200px; margin-right: 20px;}
 footer .container .footer_info .questions .social {display: flex;flex-flow: column;}
 footer .container .footer_info .questions .social .icons {width: 100%; display: flex;justify-content: space-between;}
 footer .container .footer_info .questions .social .icons i {font-size: 30px; color:blue;}
 footer .container .all_rights {height: 80px;width: 100%;display: flex;justify-content: center;align-items: flex-end;}
 footer .container .all_rights p {font-family: Arial;font-size: 12px;padding-bottom: 10px;}
+
+
