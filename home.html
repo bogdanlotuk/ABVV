@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/main.css">	
 	<link rel="stylesheet" href="css/media.css">
+	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.1/css/all.css" integrity="sha384-IT8OQ5/IfeLGe8ZMxjj3QQNqT0zhBJSiFCL3uolrGgKRuenIU+mMS94kck/AHZWu" crossorigin="anonymous">
 </head>
 <body>
@@ -31,28 +32,34 @@
 					<li><a href="">Свадебные комплименты</a></li>		
 				</ul>				
 			</div>
-			<div class="region"><p>Ваш город
-				<span>Москва</span></p>
+			<div class="region"><p>Ваш город</p>
+				<select name="city" id="city">
+					<option value="Moskow">Москва</option>
+					<option value="Kyiv">Киев</option>
+					<option value="Vinnitsa">Винница</option>
+					<option value="Bar">Бар</option>
+				</select>
 			</div>
 			<div class="phone">
 				<p>8 800 775-60-89</p>
 			</div>	
 			<div class="btn">
 				<button id="callback">Обратный звонок</button>			
-				<button id="basket">Корзина</button>
+				<button id="basket"><img src="img/10.png" alt="number"><img src="img/minibasket.png" alt="minibasket">Корзина</button>
 			</div>
 		</div>
 	</header>
 <!-- SLIDER -->
-	<section id="home_slider">
-	 	<div class="container">
-	 		<div class="img" style="background-image:url('img/Slider.png');"><div class="button_catalog">
-				<p>Скидка на подарочные наборы<br>из меда, до конца лета - не пропустите!</p>
-				<button id="catalog">Перейти в каталог</button></div>
-		</div>		
+	<section id="home_slider">		
+			<div class="container">	 
+				<div class="button_catalog">		
+					<p>Скидка на подарочные наборы<br>из меда, до конца лета - не пропустите!</p>
+					<button id="catalog">Перейти в каталог</button>
+				</div>
+			</div>		
 	</section>
 <!-- RETURN AND CONTROL -->
-	<section id="banner">
+	<section id="product">
 		<div class="container">
 			<div class="return_item">
 				<div class="img" style="background-image:url('img/31.png');"></div>
@@ -79,72 +86,72 @@
 				<h2>Популярные товары</h2>
 				<div class="divider"><p>______________</p></div>
 			</div>
-			<div class="banner_wrap">
-				<div class="banner1">
+			<div class="items_wrap">
+				<div class="item">
 					<div class="img" style="background-image:url('img/1.jpg');"><a href="#"></a></div>					
-					<p>Большая<br> коробка меда</p>
+					<a href="#"><p class="item_name">Большая<br> коробка меда</p></a>
 					<img src="img/stars.png" alt="stars">
-					<p>Краткое описание на<br> этом месте</p>
-					<p><span>2 900 руб.</span></p>
-					<button><img src="img/minibasket.png" alt="minibasket"> В корзину</button>
+					<p class="description">Краткое описание на<br> этом месте</p>
+					<p class="price">2 900 <span>руб.</span></p>
+					<button class="item_price"><img src="img/minibasket.png" alt="minibasket">В корзину</button>
 				</div>
-				<div class="banner2">
+				<div class="item">
 					<div class="img" style="background-image:url('img/2.jpg');"><a href="#"></a></div>
-					<p>Подарочный набор меда<br>Тубус</p>
+					<a href="#"><p class="item_name">Подарочный набор меда<br>Тубус</p></a>
 					<img src="img/stars.png" alt="stars">
-					<p>Краткое описание на<br> этом месте</p>
-					<p><span>880 руб.</span></p>
-					<button><img src="img/minibasket.png" alt="minibasket"> В корзину</button>
+					<p class="description">Краткое описание на<br> этом месте</p>
+					<p class="price">880 <span>руб.</span></p>
+					<button class="item_price"><img src="img/minibasket.png" alt="minibasket">В корзину</button>
 				</div>
-				<div class="banner3">
+				<div class="item">
 					<div class="img" style="background-image:url('img/3.jpg');"><a href="#"></a></div>
-					<p>Медовый набор<br>Люблю, пять вкусов</p>
+					<a href="#"><p class="item_name">Медовый набор<br>&laquo;Люблю&raquo;, пять вкусов</p></a>
 					<img src="img/stars.png" alt="stars">
-					<p>Краткое описание на<br> этом месте</p>
-					<p><span>880 руб.</span></p>
-					<button><img src="img/minibasket.png" alt="minibasket"> В корзину</button>
+					<p class="description">Краткое описание на<br> этом месте</p>
+					<p class="price">880 <span>руб.</span></p>
+					<button class="item_price"><img src="img/minibasket.png" alt="minibasket">В корзину</button>
 				</div>
-				<div class="banner4">
+				<div class="item">
 					<div class="img" style="background-image:url('img/4.jpg');"><a href="#"></a></div>
-					<p>Подарочный набор<br>Средняя корзина с медом</p>
+					<a href="#"><p class="item_name">Подарочный набор<br>Средняя корзина с медом</p></a>
 					<img src="img/stars.png" alt="stars">
-					<p>Краткое описание на<br> этом месте</p>
-					<p><span>3250 руб.</span></p>
-					<button><img src="img/minibasket.png" alt="minibasket"> В корзину</button>
+					<p class="description">Краткое описание на<br> этом месте</p>
+					<p class="price">3250 <span>руб.</span></p>
+					<button class="item_price"><img src="img/minibasket.png" alt="minibasket">В корзину</button>
 				</div>
 			</div>
-			<div class="banner_wrap">
-				<div class="banner5">
+			<div class="items_wrap">
+				<div class="item">
 					<div class="img" style="background-image:url('img/5.jpg');"><a href="#"></a></div>
-					<p>Подарочный набор Мед<br>в коробке</p>
+					<a href="#"><p class="item_name">Подарочный набор &laquo;Мед<br>в коробке&raquo;</p></a>
 					<img src="img/stars.png" alt="stars">
-					<p>Краткое описание на<br> этом месте</p>
-					<p><span>860 руб.</span></p>
-					<button><img src="img/minibasket.png" alt="minibasket"> В корзину</button>
+					<p class="description">Краткое описание на<br> этом месте</p>
+					<p class="price"> <span class="price_old"> 880 </span> <span class="price_new">860</span> <span class="new_price">руб.</span></p>
+					<button class="item_price"><img src="img/minibasket.png" alt="minibasket">В корзину</button>
 				</div>
-				<div class="banner6">
+				<div class="item">
 					<div class="img" style="background-image:url('img/6.jpg');"><a href="#"></a></div>
-					<p>Медовый набор<br>Люблю, пять вкусов</p>
+					<a href="#"><p class="item_name">Медовый набор<br>&laquo;Люблю&raquo;, пять вкусов</p></a>
 					<img src="img/stars.png" alt="stars">
-					<p>Краткое описание на<br> этом месте</p>
-					<p><span>990 руб.</span></p>
-					<button><img src="img/minibasket.png" alt="minibasket"> В корзину</button>
+					<p class="description">Краткое описание на<br> этом месте</p>
+					<p class="price">990 <span>руб.</span></p>
+					<button class="item_price"><img src="img/minibasket.png" alt="minibasket">В корзину</button>
 				</div>
-				<div class="banner7">
+				<div class="item">
 					<div class="img" style="background-image:url('img/7.jpg');"><a href="#"></a></div>
-					<p>Подарочный набор меда<br>Коробочка</p>
+					<a href="#"><p class="item_name">Подарочный набор меда<br>Коробочка</p></a>
 					<img src="img/stars.png" alt="stars">
-					<p>Краткое описание на<br> этом месте</p>
-					<p><span>350 руб.</span></p>
-					<button><img src="img/minibasket.png" alt="minibasket"> В корзину</button>
+					<p class="description">Краткое описание на<br> этом месте</p>
+					<p class="price">350 <span>руб.</span></p>
+					<button class="item_price"><img src="img/minibasket.png" alt="minibasket">В корзину</button>
 				</div>
-				<div class="banner8">
+				<div class="item">
 					<div class="img" style="background-image:url('img/8.jpg');"><a href="#"></a></div>
-					<p>Медовый набор<br>Люблю, пять вкусов</p>
+					<a href="#"><p class="item_name">Медовый набор<br>&laquo;Люблю&raquo;, пять вкусов</p></a>
 					<img src="img/stars.png" alt="stars">
-					<p>Краткое описание на<br> этом месте</p>
-					<p><span>300 руб.</span></p>
-					<button><img src="img/minibasket.png" alt="minibasket"> В корзину</button>
+					<p class="description">Краткое описание на<br> этом месте</p>
+					<p class="price">300 <span>руб.</span></p>
+					<button class="item_price"><img src="img/minibasket.png" alt="minibasket">В корзину</button>
 				</div>
 			</div>			
 		</div>
@@ -157,19 +164,19 @@
 				<div class="divider"><p>______________</p></div>
 			</div>
 			<div class="advantage_wrap">
-				<div class="advantage1">
+				<div class="advantage_item">
 					<div class="img" style="background-image: url('img/21.png');"></div>	
 					<p>Оригинальный, полезный и<br>вкусный подарок для друзей,<br>коллег и родных!</p>
 				</div>
-				<div class="advantage2">
+				<div class="advantage_item">
 					<div class="img" style="background-image: url('img/22.png');"></div>					
 					<p>Все наборы собраны и упакованы<br>дизайнерами вручную, специально<br>для Вас.</p>
 				</div>
-				<div class="advantage3">
+				<div class="advantage_item">
 					<div class="img" style="background-image:url('img/23.png');"><a href="#"></a></div>					
 					<p>Высококачественные и<br>натуральные продукты,<br>соответствующие ГОСТ</p>
 				</div>
-				<div class="advantage4">
+				<div class="advantage_item">
 					<div class="img" style="background-image:url('img/24.png');"><a href="#"></a></div>					
 					<p>Возможность самостоятельно<br>собрать подходящий набор с<br>помощью конструктора, а так же<br>брендировать</p>
 				</div>
@@ -188,22 +195,28 @@
 			</div>
 			<div class="buy_wrap">
 				<div class="buy1">
-						<div class="img" style="background-image:url('img/41.png');"><a href="#"></a></div>	
+						<div class="img"><a href="#"></a></div>	
 					<p>Вы составляете набор<br>на основе меда, чая либо варения.</p>
 				</div>
-
+				<div class="arrow">
+					<img src="img/arrow.png" alt="arrow">
+				</div>
 				<div class="buy2">
-					<div class="img" style="background-image:url('img/42.png');"><a href="#"></a></div>
+					<div class="img"><a href="#"></a></div>
 					<p>Оформляете заказ.</p>
 				</div>
-
+				<div class="arrow">
+					<img src="img/arrow.png" alt="arrow">
+				</div>
 				<div class="buy3">
-					<div class="img" style="background-image:url('img/43.png');"><a href="#"></a></div>
+					<div class="img"><a href="#"></a></div>
 					<p>Наши дизайнеры собирают<br>набор специально для Вас.</p>
 				</div>
-
+				<div class="arrow">
+					<img src="img/arrow.png" alt="arrow">
+				</div>
 				<div class="buy4">
-					<div class="img" style="background-image:url('img/44.png');"><a href="#"></a></div>
+					<div class="img"><a href="#"></a></div>
 					<p>Курьер доставляет зака<br>в удобное для Вас время и место.</p>
 				</div>
 			</div>
@@ -247,18 +260,18 @@
 					<div class="social">
 						<h3>мы в соцсетях:</h3>
 						<div class="icons">
-							<a href="#"><i class="fab fa-facebook"></i></a>
-						    <a href="#"><i class="fab fa-vk"></i></a>
-						    <a href="#"><i class="fab fa-twitter-square"></i></a>
-						    <a href="#"><i class="fab fa-odnoklassniki-square"></i></a>
-						    <a href="#"><i class="fab fa-youtube-square"></i></a>
-						    <a href="#"><i class="fab fa-google-plus"></i></a>
+							<a href="#"><img src="img/facebook.png" alt="facebook"></a>
+						    <a href="#"><img src="img/vk.png" alt="vk"></a>
+						    <a href="#"><img src="img/twitter.png" alt="twitter"></a>
+						    <a href="#"><img src="img/ok.png" alt="ok"></a>
+						    <a href="#"><img src="img/youtube.png" alt="youtube"></a>
+						    <a href="#"><img src="img/google.png" alt="google"></a>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="all_rights"><p>2018 &copy Все права защищены.</p></div>
-		</div>		
+			</div>			
+		</div>	
+		<div class="all_rights"><p>2018 &copy Все права защищены.</p></div>	
 	</footer>
 </body>
 </html>
