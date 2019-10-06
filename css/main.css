@@ -31,10 +31,11 @@ header #callback:hover, #basket:hover {cursor: pointer;}
 
 /*SLIDER*/
 #home_slider {background-image:url('../img/Slider.jpg');}
-#home_slider .container {display: flex;	max-width: 1170px;height: 500px;}
-#home_slider .container .button_catalog {display: flex;	flex-flow: column;justify-content: center;align-items: flex-start; margin-left: 125px; margin-top: -30px;}
-#home_slider .container .button_catalog #catalog {background-color: #f6b53f;width: 150px;height: 40px;border-radius: 6px;color: white; font-size: 14px; border: none;}
-#home_slider .container .button_catalog p {font-size: 26px;font-weight: bold;color: white; margin-top: -10px;}
+#home_slider .container {display: flex;max-width: 1170px;height: 500px;justify-content: center;align-items: center;}
+#home_slider .container .slider {width: 1000px;height: 300px;display: flex;justify-content: center;align-items: center;}
+#home_slider .container .slider .button_catalog {swidth: 800px; height: 300px; display: flex;	flex-flow: column;justify-content: center;align-items: flex-start; margin-left: 125px; margin-top: -30px;}
+#home_slider .container .slider .button_catalog #catalog {background-color: #f6b53f;width: 150px;height: 40px;border-radius: 6px;color: white; font-size: 14px; border: none;}
+#home_slider .container .slider .button_catalog p {font-size: 26px;font-weight: bold;color: white; margin-top: -10px;}
 
 /*RETURN AND CONTROL*/
 #product {margin-top: -60px;}
@@ -116,5 +117,3 @@ footer .container .footer_info .questions .social .icons {width: 100%; display: 
 footer .container .footer_info .questions .social .icons i {font-size: 30px; color:blue;}
 footer .all_rights {height: 50px;width: 100%;display: flex;justify-content: center;align-items: center;background-color: #ecf1f4;}
 footer .all_rights p {font-size: 11px; padding-bottom: 10px; color: #9aabb8}
-
-

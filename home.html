@@ -4,10 +4,11 @@
 	<meta charset="UTF-8">
 	<title>Honey Lab | Подарочные наборы</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/slick.css">
+	<link rel="stylesheet" type="text/css" href="css/slick-theme.css">
 	<link rel="stylesheet" href="css/main.css">	
 	<link rel="stylesheet" href="css/media.css">
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.1/css/all.css" integrity="sha384-IT8OQ5/IfeLGe8ZMxjj3QQNqT0zhBJSiFCL3uolrGgKRuenIU+mMS94kck/AHZWu" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/normalize.css">	
 </head>
 <body>
 <!-- HEADER -->
@@ -51,10 +52,21 @@
 	</header>
 <!-- SLIDER -->
 	<section id="home_slider">		
-			<div class="container">	 
-				<div class="button_catalog">		
-					<p>Скидка на подарочные наборы<br>из меда, до конца лета - не пропустите!</p>
-					<button id="catalog">Перейти в каталог</button>
+			<div class="container">	
+
+				<div class="slider">
+					<div class="button_catalog">		
+						<p>Скидка на подарочные наборы<br>из меда, до конца лета - не пропустите!</p>
+						<button id="catalog">Перейти в каталог</button>
+					</div>
+					<div class="button_catalog">		
+						<p>Скидка на подарочные наборы<br>из меда, до конца лета - не пропустите!</p>
+						<button id="catalog">Перейти в каталог</button>
+					</div>
+					<div class="button_catalog">		
+						<p>Скидка на подарочные наборы<br>из меда, до конца лета - не пропустите!</p>
+						<button id="catalog">Перейти в каталог</button>
+					</div>
 				</div>
 			</div>		
 	</section>
@@ -273,6 +285,23 @@
 		</div>	
 		<div class="all_rights"><p>2018 &copy Все права защищены.</p></div>	
 	</footer>
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
+	<script type="text/javascript">
+	    $(document).ready(function(){
+	      $(".slider").slick({
+	        slidesToShow: 1,
+	        slidesToScroll: 1,
+	        dots: true, 
+	        arrows: true,	
+	        autoplay: true,
+	        autoplaySpeed: 4000,        	
+	      });
+	    });
+  </script>
+
+
 </body>
 </html>
 
