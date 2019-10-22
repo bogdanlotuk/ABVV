@@ -2,35 +2,41 @@
 /*MAX-WIDTH - 1170px*/
 
 @media screen and (max-width: 1170px) {
-	header .container .menu {flex-flow: row;}
-	header .container .menu .menu1,	header .container .menu .menu2 {flex-direction: column;margin-top: 10px;margin-bottom: 10px;}
-	header .container .menu li {margin-top: 5px;}
-	header .phone p {font-size: 16px;}
-	header .btn {flex-flow: column;justify-content: space-between;align-items: center;		height: 100%;}
-	header .btn #callback, header .btn #basket {width: 160px;height: 30px;margin: 5px;}
-	header .btn {margin-right: 0;}
+	header .container {width: 100%;}
+	header .container .container_wrap {max-width: 1170px; display: flex; justify-content: center;}
+	header .container .container_wrap .menu {flex-flow: row; width: 340px;}
+	header .container .container_wrap .menu .menu1,	header .container .container_wrap .menu .menu2 {flex-direction: column;margin-top: 10px;margin-bottom: 10px;}
+	header .container .container_wrap .menu li {margin-top: 5px;}
+	header .container .container_wrap .phone p {font-size: 16px;}
+	header .container .container_wrap .btn {flex-flow: column;justify-content: space-around;align-items: center;height: 100%;width: 200px;}
+	header .container .container_wrap .btn #callback, header .container .container_wrap .btn #basket {width: 160px;height: 40px;margin: 5px; }
+	header .container .container_wrap .btn {margin-right: 0;}
 
-	#popular_items .container .banner_wrap{flex-wrap: wrap;}
-	#popular_items .container .banner_wrap div {min-width: 50%;}
+	#popular_items .container .items_wrap{flex-wrap: wrap;}
+	#popular_items .container .items_wrap div {min-width: 50%;}
 }
 	
 /*MAX-WIDTH - 992px*/
 	
 @media screen and (max-width: 992px) {
-	header .container .menu {flex-flow: row;}
-	header .container .menu .menu1,	header .container .menu .menu2 {flex-direction: column;margin-top: 10px;margin-bottom: 10px;}
-	header .container .menu li {margin-top: 5px;}
-	header .region {display: none;}
-	header .btn {margin-right: 0;}
+	header .container {width: 100%;}
+	header .container .container_wrap {max-width: 992px;}
+	header .container .container_wrap .menu {flex-flow: row;}
+	header .container .container_wrap .menu .menu1,	
+	header .container .container_wrap .menu .menu2 {flex-direction: column;margin-top: 10px;margin-bottom: 10px;width: 50%;}
+	header .container .container_wrap .menu li {margin-top: 5px;}
+	header .container .container_wrap .region {display: none;}
+	header .container .container_wrap .btn {margin-right: 0;}
 
-	#banner{margin-top: 0;}
+	#product{margin-top: 0;}	
 	#home_slider .container {max-height: 300px;}
-	#banner .container div {min-width: 50%;justify-content: center;}
-	#banner .container div .img {background-repeat: no-repeat;}	
+	#home_slider .container .slider {width: 100%;}
+	#product .container div {min-width: 50%;justify-content: center;}
+	#product .container div .img {background-repeat: no-repeat;}	
 	#home_slider .container .img {max-height: 300px;}
 
-	#popular_items .container .banner_wrap {flex-wrap: wrap;}
-	#popular_items .container .banner_wrap div {min-width: 50%;	justify-content: center;}
+	#popular_items .container .items_wrap {flex-wrap: wrap;}
+	#popular_items .container .items_wrap div {min-width: 50%;	justify-content: center;}
 	
 	#advantage .container .advantage_top h2 {text-align: center;}
 	#advantage .container .advantage_wrap {	flex-wrap: wrap;justify-content: center;}
@@ -38,6 +44,7 @@
 	#advantage .container .advantage_wrap div .img {background-repeat: no-repeat;width: 150px;height: 150px;}
 	
 	#how_to_buy .container .buy_wrap {flex-wrap: wrap;justify-content: center;}
+	#how_to_buy .container .buy_wrap .arrow {display: none;}
 	#how_to_buy .container .buy_wrap div {min-width: 50%;}
 	#how_to_buy .container .buy_wrap div .img {background-repeat: no-repeat;}
 
@@ -49,29 +56,45 @@
 /*MAX-WIDTH - 768px*/
 
 @media screen and (max-width: 768px) {
+	header .container .container_wrap {justify-content: space-around;}
+	header .container .container_wrap .mobile-menu {display:flex;}
+	header .container .container_wrap .menu {display: none;}
+	header .container .container_wrap .phone {display: none;}
 
-	header .phone {display: none;}
+	#home_slider {display: none;}
 
-	#home_slider .container .button_catalog {align-items: center;}
-	#home_slider .container .button_catalog p {font-size: 22px;}
-
-	#popular_items .container .banner_wrap {justify-content: center;}
+	#popular_items .container .items_wrap {justify-content: center;}
 
 	footer .container .footer_info {justify-content: center;align-items: flex-start;flex-wrap: wrap;}
 	footer .container .footer_info div {min-width: 40%;}	
 	footer .container .footer_info .about_company,footer .container .footer_info .help {margin-left: 0;}
 	footer .container .footer_info h3, footer .container .footer_info p {text-align: center;}	
-	}
+	
+
+	/*MOBILE MENU*/
+
+	header .container .container_wrap .mobile-menu .menu-btn.menu-active span{background-color: #0090ff;}
+
+	header .container .container_wrap .mobile-menu .menu-btn.menu-active span::before {transform: rotate(-45deg);}	
+	header .container .container_wrap .mobile-menu .menu-btn.menu-active span::after {transform: rotate(45deg);}	
+	header .container .container_wrap .menu.menu-active {display: flex;flex-flow: column;justify-content: center;align-items: center;height: 100vh;width: 100%;visibility: visible;	opacity: 1;	position: fixed;left: 0;top: 0;background-color: #7bceff;z-index: 8;}
+	header .container .container_wrap .menu.menu-active .menu1,
+	header .container .container_wrap .menu.menu-active .menu2 {margin: 0 auto;width: 100%;display: flex;justify-content: center;align-items: center;}
+	header .container .container_wrap .menu.menu-active .menu1 li,
+	header .container .container_wrap .menu.menu-active .menu2 li {margin: 15px 0;}
+	header .container .container_wrap .menu.menu-active .menu1 li a,
+	header .container .container_wrap .menu.menu-active .menu2 li a {font-size: 24px;font-weight: bold;color: white;}
+}
 
 /*MAX-WIDTH - 576px*/
 
 @media screen and (max-width: 576px) {
-	header .logo {display: none;}
-	header .btn #callback, header .btn #basket {width: 130px;height: 30px;margin: 5px;}
+	
+	header .container .container_wrap .btn #callback, header .container .container_wrap .btn #basket {width: 130px;height: 30px;margin: 5px;}
 	
 	#home_slider {display: none;}	
 	
-	#banner .container {flex-flow: column;}
+	#product .container {flex-flow: column;}
 
 	footer .container .footer_info {flex-flow: column;align-items: center;}
 }

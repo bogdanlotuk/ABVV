@@ -32,20 +32,21 @@
     color: transparent;
     border: none;
     outline: none;
-    background: transparent;
-    cursor: pointer;
+    background: transparent;    
 }
 
 .slick-prev,.slick-prev:hover,.slick-prev:focus {
     background-image: url(../img/prev.png);
-    left: -40px;
-    cursor: pointer;    
+    left: 20px;    
 }
 
 .slick-next,.slick-next:hover,.slick-next:focus {
     background-image: url(../img/next.png);
-    right: -40px;
+    right: 20px;
 }
+
+
+
 
 /*Dots*/
 

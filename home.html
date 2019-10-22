@@ -3,50 +3,56 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Honey Lab | Подарочные наборы</title>
+	<link rel="stylesheet" href="css/normalize.css">	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/slick.css">
 	<link rel="stylesheet" type="text/css" href="css/slick-theme.css">
 	<link rel="stylesheet" href="css/main.css">	
 	<link rel="stylesheet" href="css/media.css">
-	<link rel="stylesheet" href="css/normalize.css">	
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>	
 </head>
 <body>
 <!-- HEADER -->
 	<header>		
 		<div class="container">
-			<div class="logo">
-				<a href="#">
-					<img src="img/HoneyLab.jpg" alt="logo"/>				
-				</a>
-			</div>
-			<div class="menu">											
-				<ul class="menu1">
-					<li><a href="">О нас</a></li>
-					<li><a href="">Доставка</a></li>
-					<li><a href="">Оплата</a></li>
-					<li><a href="">Статус заказа</a></li>
-					<li><a href="">Контакты</a></li>
-				</ul>									
-				<ul class="menu2">
-					<li><a href="">Каталог</a></li>
-					<li><a href="">Конструктор</a></li>
-					<li><a href="">Свадебные комплименты</a></li>		
-				</ul>				
-			</div>
-			<div class="region"><p>Ваш город</p>
-				<select name="city" id="city">
-					<option value="Moskow">Москва</option>
-					<option value="Kyiv">Киев</option>
-					<option value="Vinnitsa">Винница</option>
-					<option value="Bar">Бар</option>
-				</select>
-			</div>
-			<div class="phone">
-				<p>8 800 775-60-89</p>
-			</div>	
-			<div class="btn">
-				<button id="callback">Обратный звонок</button>			
-				<button id="basket"><img src="img/10.png" alt="number"><img src="img/minibasket.png" alt="minibasket">Корзина</button>
+			<div class="container_wrap">
+				<div class="mobile-menu">
+					<a href="#" class="menu-btn"><span></span></a>
+				</div>
+				<div class="logo">
+					<a href="#">
+						<img src="img/HoneyLab.jpg" alt="logo"/>				
+					</a>
+				</div>
+				<div class="menu">											
+					<ul class="menu1">
+						<li><a href="">О нас</a></li>
+						<li><a href="">Доставка</a></li>
+						<li><a href="">Оплата</a></li>
+						<li><a href="">Статус заказа</a></li>
+						<li><a href="">Контакты</a></li>
+					</ul>									
+					<ul class="menu2">
+						<li><a href="">Каталог</a></li>
+						<li><a href="">Конструктор</a></li>
+						<li><a href="">Свадебные комплименты</a></li>		
+					</ul>				
+				</div>				
+				<div class="region"><p>Ваш город</p>
+					<select name="city" id="city">
+						<option value="Moskow">Москва</option>
+						<option value="Kyiv">Киев</option>
+						<option value="Vinnitsa">Винница</option>
+						<option value="Bar">Бар</option>
+					</select>
+				</div>
+				<div class="phone">
+					<p>8 800 775-60-89</p>
+				</div>	
+				<div class="btn">
+					<button id="callback">Обратный звонок</button>			
+					<button id="basket"><img src="img/10.png" alt="number"><img src="img/minibasket.png" alt="minibasket">Корзина</button>
+				</div>
 			</div>
 		</div>
 	</header>
@@ -68,6 +74,7 @@
 						<button id="catalog">Перейти в каталог</button>
 					</div>
 				</div>
+
 			</div>		
 	</section>
 <!-- RETURN AND CONTROL -->
@@ -296,11 +303,16 @@
 	        dots: true, 
 	        arrows: true,	
 	        autoplay: true,
-	        autoplaySpeed: 4000,        	
+	        autoplaySpeed: 4000, 
+	        responsive: [
+	        {breakpoint:768,
+	        settings:"unslick"
+	        }
+	        ]       	
 	      });
 	    });
-  </script>
-
+  	</script>
+ 	<script type="text/javascript" src="js/script.js"></script>
 
 </body>
 </html>

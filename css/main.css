@@ -2,45 +2,57 @@
 .container {display: flex;max-width: 1170px;width: 100%; margin: auto;justify-content: stretch;align-items: center;}
 body {font-family: Arial; color: #616161;}
 /*HEADER*/
-header .container {height:130px;}
+header .container {display: block; width: 1170px; margin:0 auto;}
+header .container_wrap {height: 130px; display: flex;align-items: center;}
 
-header .container .logo {width: 145px;display: flex;justify-content: center; align-items: center;}
-header .container .logo a {display: block; width: 127px; height: 73px;}
+header .container .container_wrap .mobile-menu {display: flex;align-items: center;justify-content: center;cursor: pointer;position: fixed;z-index: 9;	display: none;}
+header .container .container_wrap .mobile-menu .menu-btn {display: block;width: 40px;height: 40px;border-radius: 50%;background-color: #0090ff;position: relative;}
+header .container .container_wrap .mobile-menu .menu-btn span,
+header .container .container_wrap .mobile-menu .menu-btn span::before,
+header .container .container_wrap .mobile-menu .menu-btn span::after {display: block;	width: 20px;height: 2px;background-color: white;position: absolute;top: 50%;left: 50%;margin-left: -10px;margin-top: -1px;transition: all 0.4s linear;}
+header .container .container_wrap .mobile-menu .menu-btn span::before,
+header .container .container_wrap .mobile-menu .menu-btn span::after {content: "";}
+header .container .container_wrap .mobile-menu .menu-btn span::before {transform: translateY(-5px);}
+header .container .container_wrap .mobile-menu .menu-btn span::after {transform: translateY(5px);}
 
-header .container .menu {display: flex;flex-flow: column;flex-wrap: wrap;width: 405px;}
-header .container .menu .menu1 {display: flex;padding: 0;margin-top: 33px; margin-bottom: 0px; margin-left: 25px}
-header .container .menu .menu2 {display: flex;padding: 0;margin-top: 10px;margin-bottom: 25px; margin-left: 25px}
-header .container .menu .menu1 li {display: inline-block;margin-right: 12px}
-header .container .menu .menu1 li a {display: block;line-height: 20px;font-size: 12px;font-weight: 800; text-decoration: none;}
-header .container .menu .menu2 li {display: inline-block; margin-right: 20px}
-header .container .menu .menu2 li a {display: block;line-height: 20px;font-size: 13px;text-decoration: none;}
+header .container .container_wrap .logo {width: 145px;display: flex;justify-content: center; align-items: center;}
+header .container .container_wrap .logo a {display: block; width: 127px; height: 73px;}
 
-header .container .region {width: 160px;display: flex; justify-content: center;}
-header .container .region p {font-size: 12px; margin-top:20px;margin-right: 10px;padding-left: 5px;}
-header .container .region select {border: none;-webkit-appearance: none;-moz-appearance: none;appearance: none; margin-top: 10px;margin-left: 4px; font-size: 14px; font-weight: bold;}
+header .container .container_wrap .menu {display: flex;flex-flow: column;flex-wrap: wrap;width: 405px;}
+header .container .container_wrap .menu .menu1 {display: flex;padding: 0;margin-top: 33px; margin-bottom: 0px; margin-left: 25px}
+header .container .container_wrap .menu .menu2 {display: flex;padding: 0;margin-top: 10px;margin-bottom: 25px; margin-left: 25px}
+header .container .container_wrap .menu .menu1 li {display: inline-block;margin-right: 12px}
+header .container .container_wrap .menu .menu1 li a {display: block;line-height: 20px;font-size: 12px;font-weight: 800; text-decoration: none;}
+header .container .container_wrap .menu .menu2 li {display: inline-block; margin-right: 20px}
+header .container .container_wrap .menu .menu2 li a {display: block;line-height: 20px;font-size: 13px;text-decoration: none;}
 
-header .container .phone {width: 158px;display: flex; justify-content: center;}
-header .container .phone p {display: block;min-width: 120px; font-weight: 800; font-size: 16px; margin-top: 25px;}
 
-header .container .btn {width: 300px;height: 50px;display: flex;align-items: flex-end;}
-header .container .btn #callback {background-color: #0090ff; width: 160px; height: 40px;margin-left: 2px; margin-right: 10px;border-radius: 5px;color: white; font-size: 14px; border: none;}
-header .container .btn #basket {background-color: #0090ff; width: 120px; height: 40px; border-radius: 5px;color: white;font-size: 14px;border: none;}
-header .container .btn #basket img {margin-right: 10px;margin-left: 5px;}
-header .container .btn #basket img:first-child {float: right; margin-top: -20px; margin-right: -20px;}
+header .container .container_wrap .region {width: 160px;display: flex; justify-content: center;}
+header .container .container_wrap .region p {font-size: 12px; margin-top:20px;margin-right: 10px;padding-left: 5px;}
+header .container .container_wrap .region select {border: none;-webkit-appearance: none;-moz-appearance: none;appearance: none; margin-top: 10px;margin-left: 4px; font-size: 14px; font-weight: bold;}
+
+header .container .container_wrap .phone {width: 158px;display: flex; justify-content: center;}
+header .container .container_wrap .phone p {display: block;min-width: 120px; font-weight: 800; font-size: 16px; margin-top: 25px;}
+
+header .container .container_wrap .btn {width: 300px;height: 50px;display: flex;align-items: flex-end;}
+header .container .container_wrap .btn #callback {background-color: #0090ff; width: 160px; height: 40px;margin-left: 2px; margin-right: 10px;border-radius: 5px;color: white; font-size: 14px; border: none;}
+header .container .container_wrap .btn #basket {background-color: #0090ff; width: 120px; height: 40px; border-radius: 5px;color: white;font-size: 14px;border: none;}
+header .container .container_wrap .btn #basket img {margin-right: 10px;margin-left: 5px;}
+header .container .container_wrap .btn #basket img:first-child {float: right; margin-top: -20px; margin-right: -20px;}
 header #callback:hover, #basket:hover {cursor: pointer;}
 
 /*SLIDER*/
 #home_slider {background-image:url('../img/Slider.jpg');}
 #home_slider .container {display: flex;max-width: 1170px;height: 500px;justify-content: center;align-items: center;}
-#home_slider .container .slider {width: 1000px;height: 300px;display: flex;justify-content: center;align-items: center;}
-#home_slider .container .slider .button_catalog {swidth: 800px; height: 300px; display: flex;	flex-flow: column;justify-content: center;align-items: flex-start; margin-left: 125px; margin-top: -30px;}
+#home_slider .container .slider {max-width: 1000px;height: 300px;display: flex;justify-content: center;align-items: center;}
+#home_slider .container .slider .button_catalog {width: 800px; height: 300px; display: flex;	flex-flow: column;justify-content: center;align-items: flex-start; margin-left: 125px; margin-top: -30px;}
 #home_slider .container .slider .button_catalog #catalog {background-color: #f6b53f;width: 150px;height: 40px;border-radius: 6px;color: white; font-size: 14px; border: none;}
 #home_slider .container .slider .button_catalog p {font-size: 26px;font-weight: bold;color: white; margin-top: -10px;}
 
 /*RETURN AND CONTROL*/
 #product {margin-top: -60px;}
 #product .container {min-height: 100px; display: flex;flex-wrap: wrap; justify-content: space-around; align-items: center;background-color: white; z-index: 10;box-shadow: 0 14px 28px rgba(0,0,0,0.05), 0 10px 10px rgba(0,0,0,0.05)}
-#product .container div { display: flex;justify-content: center;align-items: center;width: 20%; z-index: 10;}
+#product .container div { display: flex;justify-content: center;align-items: center;width: 20%; z-index: 5;}
 #product .container div .img {display: flex; min-width: 47px; min-height: 47px;background-repeat: no-repeat;background-position: center;}
 #product .container p {font-size: 11px;margin-left: 10px;line-height: 1.5;}
 #product .container span {font-size: 14px;font-weight: bold;}
@@ -68,7 +80,7 @@ header #callback:hover, #basket:hover {cursor: pointer;}
 
 /*ADVANTAGE*/
 #advantage {background-color: #ecf1f4;}
-#advantage .container {height: 610px;display: flex;	flex-flow: column;}
+#advantage .container {min-height: 610px;display: flex;	flex-flow: column;}
 #advantage .container .advantage_top {width: 100%;height: 170px;display: flex;flex-flow: column;align-items: center; margin-bottom: 20px;}
 #advantage .container .advantage_top h2 {font-size: 24px;font-weight: 900;margin-top: 95px;margin-bottom: 0;}
 #advantage .container .advantage_top .divider p{text-align: center; margin-top: 0px;}
@@ -81,11 +93,11 @@ header #callback:hover, #basket:hover {cursor: pointer;}
 
 /*HOW TO BUY*/
 #how_to_buy {background: linear-gradient(to top, #ecf1f4, white)}
-#how_to_buy .container {min-height: 455px;display: flex;flex-flow: column;}
+#how_to_buy .container {display: flex; flex-flow: column;width: 100%;}
 #how_to_buy .container .how_to_buy_top {height: 150px;}
 #how_to_buy .container .how_to_buy_top h2 {font-weight: 900;font-size: 26px;margin-top: 75px;margin-bottom: 0;}
 #how_to_buy .container .how_to_buy_top .divider p {text-align: center;font-size: 14px;margin-top: 0;}
-#how_to_buy .container .buy_wrap {height: 300px; width: 100%;display: flex;justify-content: space-around;}
+#how_to_buy .container .buy_wrap {min-height: 300px; width: 100%;display: flex;justify-content: space-around;}
 #how_to_buy .container .buy_wrap .arrow {width: 32px;display: flex; align-items: center;}
 #how_to_buy .container .buy_wrap .arrow img {height: 32px;width: 32px; transform: scale(1.3);padding-bottom: 60px;}
 #how_to_buy .container .buy_wrap .buy1, 
@@ -99,7 +111,7 @@ header #callback:hover, #basket:hover {cursor: pointer;}
 #how_to_buy .container .buy_wrap div p {font-weight: bold;text-align: center;font-size: 14px;}
 
 /*FOOTER*/
-footer .container {height: 265px;display: flex;flex-flow: column;}
+footer .container {min-height: 265px;display: flex;flex-flow: column;}
 footer .container .footer_info {width: 100%;display: flex;justify-content: space-between;margin-top: 30px;}
 footer .container .footer_info div p {font-size: 12px;}
 footer .container .footer_info div a {text-decoration: none;}
